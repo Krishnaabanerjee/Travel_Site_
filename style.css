@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro&display=swap');
+
+/**{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    width: 80%;
+    height: 95vh;
+    /*border: 1px solid black;*/
+    margin: auto;
+}
+
+header nav{
+    width: 95%;
+    height: 7%;
+   /* border: 1px solid black;*/
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul{
+    list-style-type: none;
+    display: flex;
+}
+header nav ul li{
+    padding: 3px 15px;
+}
+header nav ul li:nth-last-child(1){
+    padding: 3px 15px;
+    background: black;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+header nav ul li:nth-last-child(1) a{
+    color: white;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: #121213;
+    font-size: 12px;
+    font-weight: 500;
+    transition: .3s linear;
+}
+header nav ul li a:hover{
+    color: grey;
+}
+
+header nav .bi-three-dots-vertical{
+    display: none;
+}
+header .content{
+    position: relative;
+    width: 100%;
+    height: 93%;
+    
+}
+header .content::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 80%;
+    
+    background: url('img/dzuku.jpg') no-repeat center center/cover;
+    border-radius: 10px;
+    z-index: -1;
+}
+header .content .headings{
+    width: 350px;
+    height: auto;
+    color: white;
+    padding: 30px;
+}
+header .content .headings h1{
+    line-height: 40px;
+    font-weight: 800;
+    
+}
+header .content .headings p{
+    font-size: 13px;
+    color: rgb(224, 216, 216);
+    font-weight: 400;
+}
+header .content .headings button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid dodgerblue;
+    background-color: dodgerblue;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header .content .headings button:hover{
+    background-color: #565659;
+    color: white
+}
+header .trip-box{
+    position: relative;
+    width: 95%;
+    height: auto;
+    margin: auto;
+   
+}
+header .trip-box .search-box{
+    position: absolute;
+    height: 60px;
+    width: 60%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 5px;
+    box-shadow: 0px 10px 25px rgb(114, 114, 114);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+header .trip-box .search-box .card{
+    width: 200px;
+    height: 100%;
+    
+}
+header .trip-box .search-box .card h4{
+    font-size: 14px;
+    margin: 0;
+    font-weight: 700;
+}
+header .trip-box .search-box .card h4 .bi{
+    margin: 2px 0px 0px 2px;
+    position: absolute;
+    font-size: 10px;
+    transition: .3s linear;
+}
+header .trip-box .search-box .card input{
+    margin-top: 3px;
+    padding: 5px 0px;
+    font-size: 10px;
+    border: none;
+    outline: none;
+
+}
+header .trip-box .search-box input[type="button"]{
+    background-color: #121213;
+    color: white;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    transition: .3s linear;
+    cursor: pointer;
+}
+header .trip-box .search-box input[type="button"]:hover{
+    background-color: grey;
+    color: white;
+}
+
+header .trip-box .travel-box{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    top: 30px;
+    
+    border-radius: 10px;
+    padding-bottom: 20px;
+    /*background: #121213;*/
+    box-shadow: 0 20px 25px -10px rgb(165, 165, 165);
+}
+header .trip-box .travel-box::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(241, 241, 241, .7);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+header .trip-box .travel-box h4{
+    margin: 0;
+    padding: 60px 0 15px 1.7%;
+
+}
+header .trip-box .travel-box .cards{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    /*overflow: auto;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .trip-box .travel-box .cards .card{
+    width: 220px;
+    height: 180px;
+   
+}
+header .trip-box .travel-box .cards .card h3{
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+header .trip-box .travel-box .cards .card h3 img{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+header .trip-box .travel-box .cards .card img{
+    width: 100%;
+    height: 50%;
+
+}
+header .trip-box .travel-box .cards .card .city-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+
+}
+header .trip-box .travel-box .cards .card .city-btn a{
+    text-decoration: none;
+    background-color: #121213;
+    color: white;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 6px 20px;
+    transition: .3s linear;
+}
+header .trip-box .travel-box .cards .card .city-btn a:hover{
+    background-color: grey;
+}
+header .trip-box .travel-box .cards .card .city-btn h5{
+    font-size: 11px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 5px;
+    line-height: 15px;
+}
+header .trip-box .travel-box .cards .card .city-btn h5 span{
+    font-size: 13px;
+    font-size: 700;
+}
+
+/*--------------------------offers------------------------------------*/
+
+.offers{
+    width: 60%;
+    height: auto;
+    margin: auto;
+    
+    margin-top: 100px;
+}
+.offers h2{
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+.offers p{
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+.offers .cards{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.offers .cards .card{
+    position: relative;
+    width: 190px;
+    height: 350px;
+    
+}
+.offers .cards .card h3{
+   width: 140px;
+   padding: 6px 0;
+   background: DodgerBlue;
+   border-radius: 20px;
+   display: grid;
+   place-items: center;
+   font-size: 11px;
+   margin: auto;
+}
+.offers .cards .card .img-text{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-top: 5px;
+
+}
+.offers .cards .card .img-text img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: .2s linear;
+}
+.offers .cards .card .img-text img:hover{
+    transform: scale(1.1);
+}
+.offers .cards .card .img-text h4{
+    position: absolute;
+    padding: 10px 15px;
+    font-size: 9px;
+    bottom: 0;
+    margin: 0;
+    color: white;
+    z-index: 2;
+}
+.offers .cards .card .img-text h4::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255, .1);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+}
+.offers .cards .card .content-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 5px 0;
+    border-radius: 0 0 5px 5px;
+}
+.offers .cards .card .content-box .price, .days{
+    margin: 0 8px;
+}
+.offers .cards .card .content-box .price .chat{
+    display: flex;
+    align-items: center;
+}
+.offers .cards .card .content-box .price .chat i{
+    color: DodgerBlue;
+    margin: 0;
+    margin-right: 4px;
+    font-size: 11px;
+}
+.offers .cards .card .content-box .price .chat span{
+    font-size: 13px;
+    margin: 0;
+    top: 4px;
+    padding-top: 2px;
+    color: DodgerBlue;
+}
+.offers .cards .card .content-box .price .info-price{
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+    justify-content: space-between;
+}
+.offers .cards .card .content-box .price .info-price a{
+    text-decoration: none;
+    color: #121213;
+    font-weight: 700;
+    font-size: 12px;
+    transition: .3s linear;
+    margin-right: 13px;
+}
+.offers .cards .card .content-box .price .info-price a:hover{
+    color: dodgerblue;
+}
+.offers .cards .card .content-box .price .info-price h4{
+    margin: 0;
+    padding-left: 20px;
+}
+
+
